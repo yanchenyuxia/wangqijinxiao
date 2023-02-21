@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="Wed, 26 Feb 2007 08:21:57 GMT"> -->
+<script language="javascript">
+	var i = 0
+	function myData(){
+		var d = new Date();
+		var year = d.getFullYear();
+		var month = d.getMonth()+1;
+		var days = d.getDate();
+		var hours = d.getHours();
+		hours=hours<10 ? "0"+hours:hours;
+		var minutes = d.getMinutes();
+		minutes=minutes<10?"0"+minutes:minutes;
+		var seconds = d.getSeconds();
+		seconds=seconds<10?"0"+seconds:seconds;
+		var milseconds = d.getMilliseconds();
+		milseconds = Math.floor(milseconds/100);
+		document.getElementById("year").innerHTML=year+"年"+month+"月"+days+"日 ";
+		document.getElementById("hour").innerHTML=hours+":"+minutes+":";
+		document.getElementById("seconds").innerHTML=seconds+".";
+		document.getElementById("milseconds").innerHTML=milseconds;
+	}
+	setInterval(myData,100);
+	
+</script>
+<!-- <style>
+	<div style="position:relative;"></div>
+	<h1 style="font-size:40px;color:black;position:absolute;top:200px;left:150px;"></h1>
+	<h2 style=""></h2>
+</style> -->
+
+
+</head>
+<body>
+<div style="WIDTH: 90%; HEIGHT: 95%;">
+	<img src="1022235018join.jpg" style= "width:98%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;z-index:-1">
+	<div id ="year" style="font-size:84px;font-weight:bold;position:absolute;left:125px;top:285px;"></div>
+	<div id ="hour" style="font-size:132px;font-weight:bolder;position:absolute;left:125px;top:450px;"></div>
+	<div id ="seconds" style="font-size:132px;font-weight:bold;color:blue;position:absolute;left:552px;top:450px;"></div>
+	<div id ="milseconds" style="font-size:132px;font-weight:bold;color:red;position:absolute;left:756px;top:450px;"></div>
+<!-- <div style="width:100%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;><img src="1022235018.jpg" style="width:300px;border:0px;" /></div> -->
+</div>
+</body></html>
